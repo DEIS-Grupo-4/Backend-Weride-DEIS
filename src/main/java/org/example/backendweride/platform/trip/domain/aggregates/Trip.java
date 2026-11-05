@@ -77,6 +77,7 @@ public class Trip {
     @Getter
     private String status;
 
+
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TripIncidentReport> incidentReportEntities = new ArrayList<>();
 
