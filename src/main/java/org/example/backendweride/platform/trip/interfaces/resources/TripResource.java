@@ -8,7 +8,7 @@ import java.util.List;
 public record TripResource(
         Long id,
         long bookingId,
-        String userId,
+        Long userId,
         Long vehicleId,
         Long startLocationId,
         Long endLocationId,
