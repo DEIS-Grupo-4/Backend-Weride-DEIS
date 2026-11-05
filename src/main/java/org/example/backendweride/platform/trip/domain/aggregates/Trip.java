@@ -29,7 +29,7 @@ public class Trip {
     private Long bookingId;
 
     @Getter
-    private String userId;
+    private Long userId;
 
     @Getter
     private Long vehicleId;

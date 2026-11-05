@@ -26,7 +26,7 @@ public class Notification extends AbstractAggregateRoot<Notification> {
     private String publicId;
 
     @Column(nullable = false)
-    private String userId;
+    private Long userId;
 
     private String title;
     private String message;

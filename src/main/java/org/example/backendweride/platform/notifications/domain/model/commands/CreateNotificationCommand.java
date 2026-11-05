@@ -1,7 +1,7 @@
 package org.example.backendweride.platform.notifications.domain.model.commands;
 
 public record CreateNotificationCommand(
-        String userId,
+        Long userId,
         String title,
         String message,
         String type,
