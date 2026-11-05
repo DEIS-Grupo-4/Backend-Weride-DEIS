@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.domain.AbstractAggregateRoot;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -26,7 +27,7 @@ public class Notification extends AbstractAggregateRoot<Notification> {
     private String publicId;
 
     @Column(nullable = false)
-    private String userId;
+    private Long userId;
 
     private String title;
     private String message;
@@ -36,9 +37,7 @@ public class Notification extends AbstractAggregateRoot<Notification> {
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @SuppressWarnings("FieldMayBeFinal")
-    private Date createdAt = new Date();
+    private LocalDateTime createdAt;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date readAt;

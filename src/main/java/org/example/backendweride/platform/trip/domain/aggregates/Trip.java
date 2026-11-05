@@ -29,7 +29,7 @@ public class Trip {
     private Long bookingId;
 
     @Getter
-    private String userId;
+    private Long userId;
 
     @Getter
     private Long vehicleId;
@@ -76,6 +76,7 @@ public class Trip {
     private int temperature;
     @Getter
     private String status;
+
 
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TripIncidentReport> incidentReportEntities = new ArrayList<>();

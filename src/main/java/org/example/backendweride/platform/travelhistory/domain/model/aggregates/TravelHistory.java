@@ -7,6 +7,7 @@ import org.example.backendweride.platform.travelhistory.domain.model.commands.Up
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public class TravelHistory {
     private String travelDistance;
 
     @CreatedDate
-    @Getter
-    private Date createdAt;
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdAt;
 
     public TravelHistory() {}
 

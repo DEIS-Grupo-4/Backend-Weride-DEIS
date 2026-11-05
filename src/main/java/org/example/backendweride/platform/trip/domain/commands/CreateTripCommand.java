@@ -7,7 +7,7 @@ import java.util.List;
 
 public record CreateTripCommand(
         long bookingId,
-        String userId,
+        long userId,
         Long vehicleId,
         Long startLocationId,
         Long endLocationId,

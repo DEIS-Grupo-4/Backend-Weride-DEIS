@@ -4,13 +4,13 @@ import java.util.Date;
 
 public record NotificationResource(
         String id,
-        String userId,
+        Long userId,
         String title,
         String message,
         String type,
         String category,
         String priority,
-        Date createdAt,
+        java.time.LocalDateTime createdAt,
         Date readAt,
         boolean isRead,
         boolean actionRequired,
